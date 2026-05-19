@@ -1,0 +1,52 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Dataset files
+data/
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.mat
+*.csv
+
+# Model outputs
+outputs/
+*.keras
+*.h5
+*.joblib
+*.pkl
+*.csv
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# TensorFlow / training artifacts
+checkpoint/
+checkpoints/
+*.ckpt
+events.out.tfevents.*
+
+# Environment files
+.env
+.env.*
