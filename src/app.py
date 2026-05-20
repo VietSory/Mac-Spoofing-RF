@@ -25,7 +25,7 @@ with st.sidebar:
     st.header("⚙️ Cấu hình")
     model_path = st.text_input(
         "Model path",
-        value="../outputs/model_cnn1d_equalized_date_split.keras"
+        value="../models/model_cnn1d_equalized_date_split.keras"
     )
     x_test_path = st.text_input(
         "X test path",

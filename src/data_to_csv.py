@@ -1,8 +1,8 @@
 import pickle
 import csv
 
-PKL_PATH = "data/ManyTx.pkl"
-CSV_PATH = "outputs/manytx_data_preview.csv"
+PKL_PATH = "../data/ManyTx.pkl"
+CSV_PATH = "../outputs/manytx_data_preview.csv"
 
 def safe_value(value, max_len=500):
     text = repr(value)

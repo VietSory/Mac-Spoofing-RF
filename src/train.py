@@ -21,10 +21,11 @@ from tensorflow.keras.layers import (
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 
 
-DATASET_PATH = "data/wisig_50tx_equalized.npz"
-OUTPUT_DIR = "outputs"
+DATASET_PATH = "../data/wisig_50tx_equalized.npz"
+OUTPUT_DIR = "../outputs"
+MODEL_DIR = "../models"
 
-MODEL_PATH = os.path.join(OUTPUT_DIR, "model_cnn1d_equalized_date_split.keras")
+MODEL_PATH = os.path.join(MODEL_DIR, "model_cnn1d_equalized_date_split.keras")
 HISTORY_PATH = os.path.join(OUTPUT_DIR, "training_history_equalized_date_split.png")
 
 TEST_DATE = "2021_03_23"
@@ -197,7 +198,7 @@ def main():
     np.save(os.path.join(OUTPUT_DIR, "y_test_equalized_date_split.npy"), y_test)
     np.save(os.path.join(OUTPUT_DIR, "y_pred_equalized_date_split.npy"), y_pred)
 
-    with open(os.path.join(OUTPUT_DIR, "normalization_equalized_date_split.pkl"), "wb") as f:
+    with open(os.path.join(MODEL_DIR, "normalization_equalized_date_split.pkl"), "wb") as f:
         pickle.dump(
             {
                 "mean": float(mean),

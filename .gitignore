@@ -33,6 +33,12 @@ outputs/
 *.pkl
 *.csv
 
+models/
+*.keras
+*.h5
+*.pkl
+
+
 # Logs
 logs/
 *.log

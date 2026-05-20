@@ -7,9 +7,10 @@ from tensorflow.keras.models import load_model
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
 
-OUTPUT_DIR = "outputs"
+OUTPUT_DIR = "../outputs"
+MODEL_DIR = "../models"
 
-MODEL_PATH = os.path.join(OUTPUT_DIR, "model_cnn1d_equalized_date_split.keras")
+MODEL_PATH = os.path.join(MODEL_DIR, "model_cnn1d_equalized_date_split.keras")
 X_TEST_PATH = os.path.join(OUTPUT_DIR, "X_test_equalized_date_split.npy")
 Y_TEST_PATH = os.path.join(OUTPUT_DIR, "y_test_equalized_date_split.npy")
 

@@ -1,7 +1,7 @@
 import numpy as np
 from collections import Counter
 
-DATASET_PATH = "data/wisig_50tx_equalized.npz"
+DATASET_PATH = "../data/wisig_50tx_equalized.npz"
 # Hoặc đổi sang:
 # DATASET_PATH = "outputs/wisig_50tx_raw.npz"
 
