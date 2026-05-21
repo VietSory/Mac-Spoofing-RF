@@ -23,17 +23,39 @@ st.caption(
 
 with st.sidebar:
     st.header("⚙️ Cấu hình")
+
+    experiment = st.selectbox(
+        "Chọn thí nghiệm",
+        [
+            "Date split",
+            "Random split"
+        ]
+    )
+
+    if experiment == "Date split":
+        default_model_path = "../models/model_cnn1d_equalized_date_split.keras"
+        default_x_test_path = "../outputs/X_test_equalized_date_split.npy"
+        default_y_test_path = "../outputs/y_test_equalized_date_split.npy"
+        split_description = "Train: 3 ngày đầu, Test: 2021_03_23"
+    else:
+        default_model_path = "../models/model_cnn1d_equalized_random_split.keras"
+        default_x_test_path = "../outputs/X_test_equalized_random_split.npy"
+        default_y_test_path = "../outputs/y_test_equalized_random_split.npy"
+        split_description = "Random split: Train/Val/Test chia ngẫu nhiên theo tỉ lệ 64/16/20"
+
+    st.info(split_description)
+
     model_path = st.text_input(
         "Model path",
-        value="../models/model_cnn1d_equalized_date_split.keras"
+        value=default_model_path
     )
     x_test_path = st.text_input(
         "X test path",
-        value="../outputs/X_test_equalized_date_split.npy"
+        value=default_x_test_path
     )
     y_test_path = st.text_input(
         "y test path",
-        value="../outputs/y_test_equalized_date_split.npy"
+        value=default_y_test_path
     )
     random_seed = st.number_input(
         "Random seed",
@@ -233,9 +255,3 @@ elif mode == "Nhập MAC từ Kali":
         elif result["status"] == "SPOOFING":
             st.error("Kết luận: MAC SPOOFING DETECTED")
             st.json(result)
-
-        st.markdown(
-            """
-            Khi thuyết trình, bạn nói rõ: Kali chứng minh MAC có thể bị đổi thật; còn phần RF fingerprint được mô phỏng bằng WiSig vì muốn capture live RF/IQ cần USRP hoặc SDR.
-            """
-        )
