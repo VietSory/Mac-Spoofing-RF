@@ -620,7 +620,3 @@ WiSig ManyTx
 ```
 
 ---
-
-## Câu chốt của project
-
-> MAC address có thể bị giả mạo bằng phần mềm, nhưng RF fingerprint phản ánh đặc trưng vật lý của thiết bị phát sóng. Vì vậy, việc kết hợp MAC whitelist với RF fingerprint có thể hỗ trợ phát hiện các trường hợp MAC Spoofing trong mạng Wi-Fi.
